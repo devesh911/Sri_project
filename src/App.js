@@ -19,8 +19,8 @@ function App() {
   return (
     <>
     <Navbar title="Rentro"  abouttext="Rent it" mode={mode} toogleMode = {toogleMode}  />
-    <div className="container"><TextForm heading="New form" mode={mode}/></div>
-    <About mode={mode}/>
+    <div className="container"><TextForm heading="" mode={mode}/></div>
+    {/* <About mode={mode}/> */}
     </>
   );
 }
