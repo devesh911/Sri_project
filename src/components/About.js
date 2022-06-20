@@ -3,35 +3,37 @@ import React, { useState } from 'react'
 export default function About(props) {
 
 
-  const [style, setstyle] = useState({
-    color: 'black',
-    backgroundColor: 'white',
-    // border: "solid 1px red" 
-  })
+  // const [style, setstyle] = useState({
+  //   color: 'black',
+  //   backgroundColor: 'white',
+  //   // border: "solid 1px red" 
+  // })
 
-  // if(props.mode === 'light') {
+  // if(props.mode === 'dark' ) {
+  //   setstyle({
+  //         color: 'black',
+  //         backgroundColor: 'white'
+  //       })
+   
+  //   console.log("Hey")
+  // }
+  // else if (props.mode === 'light' ) {
   //   setstyle({
   //     color: '#816797',
   //     backgroundColor: '#1B2430',
-
   //   })
-  // }
-  // else if (props.mode === 'dark') {
-  //   setstyle({
-  //     color: 'black',
-  //     backgroundColor: 'white'
-  //   })
+   
   // }
 
 
 
   return (
-    <div className="container my-3" style={style}>
+    <div className="container my-3" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797" , borderRadius:"10px"}}>
       <h1>About us</h1>
       <div className="accordion" id="accordionExample" >
-        <div className="accordion-item" style={style}>
+        <div className="accordion-item my-2" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor: props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797"}}>
           <h2 className="accordion-header" id="headingOne">
-            <button style={style} className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797"}} className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Accordion Item #1
       </button>
           </h2>
@@ -41,9 +43,9 @@ export default function About(props) {
       </div>
           </div>
         </div>
-        <div className="accordion-item" style={style}>
+        <div className="accordion-item my-2" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797"}}>
           <h2 className="accordion-header" id="headingTwo">
-            <button style={style} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797"}} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Accordion Item #2
       </button>
           </h2>
@@ -53,9 +55,9 @@ export default function About(props) {
       </div>
           </div>
         </div>
-        <div className="accordion-item" style={style}>
+        <div className="accordion-item my-2" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797"}}>
           <h2 className="accordion-header" id="headingThree">
-            <button style={style} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <button style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797"}} className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Accordion Item #3
       </button>
           </h2>

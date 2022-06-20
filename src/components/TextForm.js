@@ -21,6 +21,7 @@ export default function TextForm(props) {
   }
   const handlefindChange = (event) => {
     findWord(event.target.value);
+    
   };
   const handleReplaceChange = (event) => {
     replaceWord(event.target.value)
@@ -48,10 +49,10 @@ export default function TextForm(props) {
 
   
   </div>
-  <div className={`className mx-2 text-${props.mode ==='light'?'dark':'light'}`} >
+  <div className="className mx-2 " style={{color: props.mode==='light'?'black':'#816797' }} >
     <h1>Your text summary</h1>
     <p>{text.split(" ").length } word and {text.length} charachters</p>
-    <p>{0.08 *text.split(" ").length } tim eto read</p>
+    <p>{0.08 *text.split(" ").length } time to read</p>
     <h1>Preview</h1>
     <p>{text}</p>
   </div>
