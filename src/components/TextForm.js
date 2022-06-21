@@ -37,7 +37,7 @@ export default function TextForm(props) {
   return (
     <>
     <div className={`container text-${props.mode ==='light'?'dark':'light'} `}> 
-      <h1>{props.heading}</h1>
+    <h3 className="my-2" style={{color: props.mode==='light'?'black':'#816797'}}>{props.heading}</h3>
       <div className="mb-3 text-light">
       <textarea className="form-control" label="enter" id="exampleFormControlTextarea1" value={text} onChange={handleonchange} style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}} rows="3"></textarea>
       <textarea className="form-control" id="exampleFormControlTextarea1" value={fWord} onChange={handlefindChange} style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}} rows="3"></textarea>
@@ -54,7 +54,7 @@ export default function TextForm(props) {
     <p>{text.split(" ").length } word and {text.length} charachters</p>
     <p>{0.08 *text.split(" ").length } time to read</p>
     <h1>Preview</h1>
-    <p>{text}</p>
+    <p>{text.length>0?text:"Enter something"}</p>
   </div>
    </>
   

@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 export default function Navbar(props) {
   return (
     <>
-      <nav className={`navbar navbar-expand-lg navbar-${props.mode}  bg-${props.mode}`}>
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">{props.title}</a>
+      <nav className="navbar navbar-expand-lg" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}}>
+        <div className="container-fluid" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}}>
+          <a className="navbar-brand" href="/" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}}>{props.title}</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
