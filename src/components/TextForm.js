@@ -39,8 +39,8 @@ export default function TextForm(props) {
     <div className={`container text-${props.mode ==='light'?'dark':'light'} `}> 
     <h3 className="my-2" style={{color: props.mode==='light'?'black':'#816797'}}>{props.heading}</h3>
       <div className="mb-3 text-light">
-      <textarea className="form-control" label="enter" id="exampleFormControlTextarea1" value={text} onChange={handleonchange} style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}} rows="3"></textarea>
-      <textarea className="form-control" id="exampleFormControlTextarea1" value={fWord} onChange={handlefindChange} style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}} rows="3"></textarea>
+      <textarea className="form-control" label="enter" id="exampleFormControlTextarea1" value={text} onChange={handleonchange} style={props.style} rows="3"></textarea>
+      <textarea className="form-control" id="exampleFormControlTextarea1" value={fWord} onChange={handlefindChange} style={props.style} rows="3"></textarea>
       <textarea className="form-control" id="exampleFormControlTextarea1" value={rWord} onChange={handleReplaceChange} style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430'}} rows="3"></textarea>
     </div>
     <button className="btn btn-primary" onClick={handleUpClick} >To uppercase</button>
