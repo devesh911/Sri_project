@@ -1,31 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function About(props) {
-
-
-  // const [style, setstyle] = useState({
-  //   color: 'black',
-  //   backgroundColor: 'white',
-  //   // border: "solid 1px red" 
-  // })
-
-  // if(props.mode === 'dark' ) {
-  //   setstyle({
-  //         color: 'black',
-  //         backgroundColor: 'white'
-  //       })
-   
-  //   console.log("Hey")
-  // }
-  // else if (props.mode === 'light' ) {
-  //   setstyle({
-  //     color: '#816797',
-  //     backgroundColor: '#1B2430',
-  //   })
-   
-  // }
-
-
 
   return (
     <div className="container my-3" style={{color: props.mode==='light'?'black':'#816797' , backgroundColor:props.mode==='light'?'white':'#1B2430' , border:"solid 1px #816797" , borderRadius:"10px"}}>
