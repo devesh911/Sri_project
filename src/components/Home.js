@@ -3,7 +3,6 @@ import BlogList from './BlogList'
 
 export default function Home() {
 
-const[name,setname] = useState(null)
 const[blog,setBlogs] = useState(null);
 const[pending , setPending] = useState(true);
 const[error , setError ] = useState(null)
@@ -19,11 +18,9 @@ const[error , setError ] = useState(null)
     if(!res.ok){
       throw Error('could not fetch data ')
     }
-    console.log(res)
     return res.json();
   })
   .then(data=>{
-    console.log(data);
     setBlogs(data);
     setPending(false);
     setError(null);
@@ -35,7 +32,7 @@ const[error , setError ] = useState(null)
     }
       
     )
-    },2000)
+    },3000)
     
   },[]);
   return (
