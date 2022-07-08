@@ -2,13 +2,15 @@ import React  from "react";
 // import About from "./components/About";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Create from "./components/Create";
+
 import{
   BrowserRouter as Router , 
   Route , 
   Switch
 } from 'react-router-dom'
-import Create from "./components/Create";
-
+import BlogDetails from "./components/BlogDetails";
+import ErrorPage from "./components/ErrorPage";
   function App() {
  
   return (
@@ -27,6 +29,14 @@ import Create from "./components/Create";
           <Route exact path="/create">
             <Create/>
           </Route>
+          <Route exact path="/blog/:id">
+            <BlogDetails/>
+          </Route>
+          <Route path="*">
+            <ErrorPage/>
+          </Route>
+          
+          
         </Switch>
       </div>
     </div>
